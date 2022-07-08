@@ -5,19 +5,11 @@ import { size, fonts, colors } from "../utils";
 
 export default function InfoBlock() {
   return (
-    <View style={styles.containter}>
-      <Text style={styles.text}>InfoBlock</Text>
-    </View>
+    <Text style={styles.text}>InfoBlock</Text>
   );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: colors.BLOCK_BACKGROUND,
-        alignItems: 'center',
-        borderWidth: 2
-    },
     text: {
         fontSize: size.BODY,
         fontFamily: fonts.BODY,
