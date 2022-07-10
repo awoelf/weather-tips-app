@@ -1,8 +1,9 @@
-import { Comfortaa_700Bold, Inter_400Regular } from "@expo-google-fonts/dev";
+import { Comfortaa_700Bold, Inter_400Regular, Inter_700Bold } from "@expo-google-fonts/dev";
 
 export const colors = {
-    BACKGROUND_COLOR: '#869AE2',
-    BLOCK_BACKGROUND: '#5876B8',
+    BACKGROUND_COLOR_DAY: '#7D8CDC',
+    BACKGROUND_COLOR_NIGHT: '#454F84',
+    BOX_BACKGROUND: '#546DC550',
     FONT_COLOR: '#EAEBED',
     GREEN: '#ABCAC3',
     RED: '#D84845',
@@ -17,5 +18,6 @@ export const size = {
 
 export const fonts = {
     HEADER: 'Comfortaa_700Bold',
-    BODY: 'Inter_400Regular'
+    BODY: 'Inter_400Regular',
+    BOLD: 'Inter_700Bold'
 };

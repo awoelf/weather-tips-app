@@ -19,7 +19,10 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
+    "react-native-auto-size-text": "^1.1.1",
     "react-native-dotenv": "^3.3.1",
+    "react-native-responsive-fontsize": "^0.5.1",
+    "react-native-splash-screen": "^3.3.0",
     "react-native-web": "0.17.7"
   },
   "devDependencies": {
