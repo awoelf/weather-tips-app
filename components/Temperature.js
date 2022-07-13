@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'nowrap',
     alignItems: 'center',
-    flexShrink: 1
+    flexShrink: 1,
   },
   temperature: {
     fontFamily: fonts.HEADER,

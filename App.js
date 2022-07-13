@@ -1,7 +1,8 @@
 import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Dimensions, useWindowDimensions } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import React, { useCallback, useEffect, useState } from 'react';
 import * as Location from 'expo-location';
+import * as SplashScreen from 'expo-splash-screen';
 import { useFonts, Comfortaa_700Bold, Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/dev';
 
 import { WEATHER_API_KEY, WEATHER_URL, WEATHER_ALERT_URL } from '@env'
@@ -9,6 +10,8 @@ import { colors, size, fonts } from './utils';
 import Temperature from './components/Temperature';
 import WeatherDetails from './components/WeatherDetails';
 import Alerts from './components/Alerts';
+import MiscDetails from './components/MiscDetails';
+import WeatherTips from './components/WeatherTips';
 
 
 export default function App() {
@@ -16,20 +19,22 @@ export default function App() {
   const [errorMsg, setErrorMsg] = useState(null); // State that holds information about error messages
   const [unitSystem, setUnitSystem] = useState('I'); // Determines imperial or celsius units
   const [alert, setAlert] = useState(null);
+  const [appReady, setAppReady] = useState(false);
  
   let [fontsLoaded] = useFonts({
     Comfortaa_700Bold, Inter_400Regular, Inter_700Bold
   });
 
-  // useEffect is a custom hook that runs once initially.
   useEffect(() => {
     loadApp()
-  }, [unitSystem]);  // When unitSystem changes, useEffect will run.
+  }, [unitSystem]);
 
   async function loadApp() {
     setWeather(null);
     setErrorMsg(null);
     try {
+
+      await SplashScreen.preventAutoHideAsync();
 
       let { status } = await Location.requestForegroundPermissionsAsync();
 
@@ -41,69 +46,72 @@ export default function App() {
       const location = await Location.getCurrentPositionAsync();
       const {latitude, longitude} = location.coords;
 
-      const weatherUrl = `${WEATHER_URL}lat=${latitude}&lon=${longitude}&key=${WEATHER_API_KEY}&units=${unitSystem}`;
+      const weatherUrl = `${WEATHER_URL}&lat=${latitude}&lon=${longitude}&key=${WEATHER_API_KEY}&units=${unitSystem}`;
       const weatherResponse = await fetch(weatherUrl);
       const weatherResult = await weatherResponse.json();
 
-      const alertUrl = `${WEATHER_ALERT_URL}lat=${latitude}&lon=${longitude}&key=${WEATHER_API_KEY}`;
+      const alertUrl = `${WEATHER_ALERT_URL}&lat=${latitude}&lon=${longitude}&key=${WEATHER_API_KEY}`;
       const alertResponse = await fetch(alertUrl);
-      const alertResult = await alertResponse.json();
-      
+      const alertResult = await alertResponse.json();  
+
       (weatherResponse.ok) ? setWeather(weatherResult) : setErrorMsg(weatherResult.message);
       (alertResponse.ok) ? setAlert(alertResult) : setErrorMsg(alertResult.message);
+
+      setAppReady(true);
 
     } catch(error) {
       setErrorMsg(error.message);
     };
   };
 
-  //TODO change to a splash screen to get rid of scary yellow text.
-  if (!fontsLoaded) {
-    return (
-      <View>
-        <Text>Help</Text>
-      </View>
-    )
-  } else {
+  const onLayoutRootView = useCallback(async () => {
+    if (appReady) {
+      await SplashScreen.hideAsync();
+    }
+  }, [appReady]);
+
+  if (!appReady) {
+    return null;
+  };
+
     // Normal display
-    if(weather) {
-      let { data: [{ pod }]} = weather; 
+    if(weather && fontsLoaded) {
+      let { data: [{ pod }]} = weather;
       return (
-        <View style={[pod == String('d') ? styles.mainDay : styles.mainNight]}>
+        <View style={[pod == String('d') ? styles.mainDay : styles.mainNight]} onLayout={onLayoutRootView}>
           <View style={styles.header}>
             <StatusBar /> 
-            <Text><Temperature weather={weather} /></Text>
+            <Temperature weather={weather} />
           </View>
-          {parseInt(alert) ?
+          {alert ?
             <View style={styles.infoBox}>
-              <Text><Alerts alert={alert}></Alerts></Text>
+              <Alerts alert={alert}></Alerts>
             </View> : null
           }
           <View style={styles.infoBox}>
-            <Text><WeatherDetails weather={weather} /></Text>
+            <WeatherDetails weather={weather} />
+          </View>
+          <View style={styles.infoBox}>
+            <MiscDetails weather={weather} />
+          </View>
+          <View style={styles.infoBox}>
+            <WeatherTips weather={weather} />
           </View>
         </View>
       )
     // Error page
     } else if (errorMsg){
       return(
-        <View style={styles.main}>
+        <View style={styles.mainDay} onLayout={onLayoutRootView}>
           <StatusBar />
           <Text style={styles.text}>{errorMsg}</Text>
         </View>
       );
-    // Misc. loading. Will be deleted when splash page is implemented.
+    // Just in case something weird happens, return null.  
     } else {
-      return (
-        <View style={styles.main}>
-          <StatusBar />
-          <Text style={styles.loadText}>Loading...</Text>
-        </View>
-      )
-    }
+      return null;
+    };
   };
-    
-};
  
 
 const styles = StyleSheet.create({
@@ -116,12 +124,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.BACKGROUND_COLOR_NIGHT
   },
   text: {
-    fontFamily: fonts.BODY,
-    fontSize: size.BODY,
-    color: colors.FONT_COLOR,
-    textAlign: 'center'
-  },
-  loadText: {
     fontFamily: fonts.HEADER,
     fontSize: size.BODY,
     color: colors.FONT_COLOR,
@@ -134,8 +136,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
     marginVertical: 4,
     borderRadius: 15,
-    alignItems: 'center',
-    width: 300
+    alignItems: 'stretch'
   },
   header: {
     marginBottom: 5

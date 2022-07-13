@@ -1,0 +1,345 @@
+{
+    "200":{
+        "thunderstorm": [
+            "Avoid water",
+            "Don't touch electrical equipment.",
+            "Avoid windows, doors, porches, and concrete.",
+            "Seek shelter immediately, even if caught out in the open.",
+            "Avoid open spaces.",
+            "Don't stay near tall structures."
+        ], 
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ]
+    },
+    "201": {
+        "thunderstorm": [
+            "Avoid water",
+            "Don't touch electrical equipment.",
+            "Avoid windows, doors, porches, and concrete.",
+            "Seek shelter immediately, even if caught out in the open.",
+            "Avoid open spaces.",
+            "Don't stay near tall structures."
+        ], 
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ]
+    },
+    "202": {
+        "thunderstorm": [
+            "Avoid water",
+            "Don't touch electrical equipment.",
+            "Avoid windows, doors, porches, and concrete.",
+            "Seek shelter immediately, even if caught out in the open.",
+            "Avoid open spaces.",
+            "Don't stay near tall structures."
+        ], 
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ]
+    },
+    "230": {
+        "thunderstorm": [
+            "Avoid water",
+            "Don't touch electrical equipment.",
+            "Avoid windows, doors, porches, and concrete.",
+            "Seek shelter immediately, even if caught out in the open.",
+            "Avoid open spaces.",
+            "Don't stay near tall structures."
+        ], 
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ]
+    },
+    "231": {
+        "thunderstorm": [
+            "Avoid water",
+            "Don't touch electrical equipment.",
+            "Avoid windows, doors, porches, and concrete.",
+            "Seek shelter immediately, even if caught out in the open.",
+            "Avoid open spaces.",
+            "Don't stay near tall structures."
+        ], 
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ]
+    },
+    "232": {
+        "thunderstorm": [
+            "Avoid water",
+            "Don't touch electrical equipment.",
+            "Avoid windows, doors, porches, and concrete.",
+            "Seek shelter immediately, even if caught out in the open.",
+            "Avoid open spaces.",
+            "Don't stay near tall structures."
+        ], 
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ]
+    },
+    "233": {
+        "thunderstorm": [
+            "Avoid water",
+            "Don't touch electrical equipment.",
+            "Avoid windows, doors, porches, and concrete.",
+            "Seek shelter immediately, even if caught out in the open.",
+            "Avoid open spaces.",
+            "Don't stay near tall structures."
+        ]
+    },
+    "300": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "301": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "302": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "500": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "501": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "502": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "511": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "520": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "521": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "522": {
+        "rain": [
+            "Don't drive in flooded areas.",
+            "Stay out of floodwater.",
+            "Cover and clean open wounds to reduce chance of infection.",
+            "Avoid electrical hazards."
+        ] 
+    },
+    "600": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "601": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "602": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "610": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "611": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "612": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "621": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "622": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "623": {
+        "winter weather": [
+            "Stay in a warm place indoors.",
+            "Conserve heat in your home by closing off unneeded rooms and covering windows and cracks.",
+            "Dress warm and stay dry.",
+            "Leave all water taps slightly open so they drip continuously.",
+            "Stay off ice.",
+            "From time to time, move your arms, legs, fingers, and toes to keep blood circulating."
+        ] 
+    },
+    "700": {
+        "limited visibility": [
+            "Slow down and allow extra time to reach your destination.",
+            "While driving, ensure that your low-beam headlights are on.",
+            "Avoid using high-beams as they can create glare.",
+            "When visibility is extremely limited, pull over to a safe location and wait for conditions to improve."
+        ] 
+    },
+    "711": {
+        "limited visibility": [
+            "Slow down and allow extra time to reach your destination.",
+            "While driving, ensure that your low-beam headlights are on.",
+            "Avoid using high-beams as they can create glare.",
+            "When visibility is extremely limited, pull over to a safe location and wait for conditions to improve."
+        ] 
+    },
+    "721": {
+        "limited visibility": [
+            "Slow down and allow extra time to reach your destination.",
+            "While driving, ensure that your low-beam headlights are on.",
+            "Avoid using high-beams as they can create glare.",
+            "When visibility is extremely limited, pull over to a safe location and wait for conditions to improve."
+        ] 
+    },
+    "731": {
+        "limited visibility": [
+            "Slow down and allow extra time to reach your destination.",
+            "While driving, ensure that your low-beam headlights are on.",
+            "Avoid using high-beams as they can create glare.",
+            "When visibility is extremely limited, pull over to a safe location and wait for conditions to improve."
+        ] 
+    },
+    "741": {
+        "limited visibility": [
+            "Slow down and allow extra time to reach your destination.",
+            "While driving, ensure that your low-beam headlights are on.",
+            "Avoid using high-beams as they can create glare.",
+            "When visibility is extremely limited, pull over to a safe location and wait for conditions to improve."
+        ] 
+    },
+    "751": {
+        "limited visibility": [
+            "Slow down and allow extra time to reach your destination.",
+            "While driving, ensure that your low-beam headlights are on.",
+            "Avoid using high-beams as they can create glare.",
+            "When visibility is extremely limited, pull over to a safe location and wait for conditions to improve."
+        ] 
+    },
+    "800": [
+        null
+    ],
+    "801": [
+        null
+    ],
+    "802": [
+        null
+    ],
+    "803": [
+        null
+    ],
+    "804": [
+        null
+    ],
+    "900": [
+        null
+    ]
+
+}

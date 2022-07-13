@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import React from "react";
 
 import { colors, fonts, size } from "../utils";
@@ -15,15 +15,21 @@ export default function WeatherDetails({weather}) {
     return (
         <View style={styles.rowContainer}>
             <View style={styles.itemContainer}>
-                <Image style={styles.icon} source={{uri: feelsLikeIcon}} /> 
-                <Text style={styles.itemText}>Feels Like</Text>
-                <Text style={styles.itemText}>{app_temp}°</Text>
+            <Image style={styles.icon} source={{uri: feelsLikeIcon}} />
+            <Text style={styles.itemText}>Feels Like</Text>
+            <Text style={styles.itemText}>{app_temp}°</Text>
+                
             </View>
-            <View style={styles.itemContainer}>
-                <Image style={styles.icon} source={{uri: humidityIcon}} /> 
-                <Text style={styles.itemText}>Humidity</Text>
-                <Text style={styles.itemText}>{rh}%</Text>
-            </View>  
+            <View style={{...styles.itemContainer,
+                borderColor: colors.BOX_BACKGROUND,
+                borderRightWidth: 2,
+                borderLeftWidth: 2}}>
+                <View style={{...styles.itemContainer, marginHorizontal: 7}}>
+                    <Image style={styles.icon} source={{uri: humidityIcon}} />
+                    <Text style={styles.itemText}>Humidity</Text>
+                    <Text style={styles.itemText}>{rh}%</Text>
+                </View>
+            </View> 
             <View style={styles.itemContainer}>
                 <Image style={styles.icon} source={{uri: windIcon}} /> 
                 <Text style={styles.itemText}>Wind Speed</Text>
@@ -36,11 +42,12 @@ export default function WeatherDetails({weather}) {
 const styles = StyleSheet.create({
     rowContainer: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20
     },
     itemContainer: {
-        marginHorizontal: 10,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     itemText: {
         fontSize: size.BODY,
