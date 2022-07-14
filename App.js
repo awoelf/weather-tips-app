@@ -1,5 +1,5 @@
-import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
 import React, { useCallback, useEffect, useState } from 'react';
 import * as Location from 'expo-location';
 import * as SplashScreen from 'expo-splash-screen';
@@ -12,6 +12,8 @@ import WeatherDetails from './components/WeatherDetails';
 import Alerts from './components/Alerts';
 import MiscDetails from './components/MiscDetails';
 import WeatherTips from './components/WeatherTips';
+import ChangeUnits from './components/ChangeUnits';
+import Reload from './components/Reload';
 
 
 export default function App() {
@@ -79,24 +81,26 @@ export default function App() {
       let { data: [{ pod }]} = weather;
       return (
         <View style={[pod == String('d') ? styles.mainDay : styles.mainNight]} onLayout={onLayoutRootView}>
-          <View style={styles.header}>
-            <StatusBar /> 
-            <Temperature weather={weather} />
-          </View>
-          {alert ?
+          <StatusBar /> 
+          <ScrollView>
+            <View style={styles.header}>
+              <Temperature weather={weather}/>
+            </View>
+            <View style={{...styles.infoBox}}>
+              <WeatherDetails weather={weather} />
+            </View>
+            {alert ?
+              <View style={styles.infoBox}>
+                <Alerts alert={alert}></Alerts>
+              </View> : null
+            }
             <View style={styles.infoBox}>
-              <Alerts alert={alert}></Alerts>
-            </View> : null
-          }
-          <View style={styles.infoBox}>
-            <WeatherDetails weather={weather} />
-          </View>
-          <View style={styles.infoBox}>
-            <MiscDetails weather={weather} />
-          </View>
-          <View style={styles.infoBox}>
-            <WeatherTips weather={weather} />
-          </View>
+              <WeatherTips weather={weather} />
+            </View>
+            <View style={styles.infoBox}>
+              <MiscDetails weather={weather} />
+            </View>
+          </ScrollView>
         </View>
       )
     // Error page
@@ -109,7 +113,13 @@ export default function App() {
       );
     // Just in case something weird happens, return null.  
     } else {
-      return null;
+      return(
+        <View style={styles.mainDay}>
+          <StatusBar />
+          <Text style={styles.text}>Loading...</Text>
+        </View>
+      )
+      
     };
   };
  
@@ -125,7 +135,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: fonts.HEADER,
-    fontSize: size.BODY,
+    fontSize: size.HEADER2,
     color: colors.FONT_COLOR,
     textAlign: 'center',
     top: Dimensions.get('window').height/2
@@ -139,6 +149,10 @@ const styles = StyleSheet.create({
     alignItems: 'stretch'
   },
   header: {
-    marginBottom: 5
+    paddingTop: 30
+  },
+  smallButton: {
+    width: 40,
+    marginBottom: 10
   }
 });

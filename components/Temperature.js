@@ -27,7 +27,6 @@ export default function Temperature({weather}) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 30,
     flexDirection: 'row',
     flexWrap: 'nowrap',
     alignItems: 'center',
@@ -52,6 +51,6 @@ const styles = StyleSheet.create({
   iconLocation: {
     position: 'absolute', 
     left: 220, 
-    bottom: 40,
+    bottom: 40
   }
 });
