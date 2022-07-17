@@ -15,4 +15,10 @@ width="300"
 height="auto">
 </div>
 
+<h2>Fresh Icons for Weatherbit.io</h2>
+<p>High quality icons made for weatherbit.io API codes.</p>
 
+<img title="scrolling through the weather-tips app" alt="Alt text" 
+src="https://res.cloudinary.com/awoelf/image/upload/v1658021971/weather-tips%20demo/weather-icon-preview.png"
+width="600"
+height="auto">
