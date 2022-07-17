@@ -223,30 +223,10 @@
         "Avoid using high-beams as they can create glare.",
         "When visibility is extremely limited, pull over to a safe location and wait for conditions to improve."
     ],
-    "800": [
-        null
-    ],
-    "801": [
-        null
-    ],
-    "802": [
-        null
-    ],
-    "803": [
-        null
-    ],
-    "804": [
-        null
-    ],
-    "900": [
-        null
-    ],
-    "extreme-heat": [
-        "Wear lightweight, light-colored, loose-fitting clothing.",
-        "Stay in an air-conditioned place as much as possible.",
-        "Limit outdoor activities to when it's coolest, like morning and evening.",
-        "Stop all activity if you become lightheaded, confused, weak, or faint.",
-        "Wear sunscreen.",
-        "Stay hydrated"
-    ]
+    "800": null,
+    "801": null,
+    "802": null,
+    "803": null,
+    "804": null,
+    "900": null
 }

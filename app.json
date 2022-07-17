@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "weather-tips-app",
+    "name": "Weather Tips",
     "slug": "weather-tips-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,7 +23,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/splash.png",
         "backgroundColor": "#7D8CDC"
-      }
+      },
+      "package": "com.awoelf.weathertipsapp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
+  "expoServerPort": null,
   "packagerPort": 19000,
   "expoServerNgrokUrl": "https://f9-7f9.anonymous.weather-tips-app.exp.direct",
   "packagerNgrokUrl": "https://f9-7f9.anonymous.weather-tips-app.exp.direct",
-  "ngrokPid": 11828,
+  "ngrokPid": 11244,
   "packagerPid": null,
   "webpackServerPort": null
 }

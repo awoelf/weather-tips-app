@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 
 import { colors, fonts, size } from "../utils";
@@ -6,7 +6,7 @@ import { ICON_URL } from '@env';
 
 //TODO: format wind speed for metric and imperial
 
-export default function WeatherDetails({weather}) {
+export default function WeatherDetails({weather, unitSystem}) {
     const { data: [{ wind_spd, app_temp, rh }]} = weather;
     const feelsLikeIcon = `${ICON_URL}feels-like.png`;
     const humidityIcon = `${ICON_URL}humidity.png`;
@@ -33,7 +33,11 @@ export default function WeatherDetails({weather}) {
             <View style={styles.itemContainer}>
                 <Image style={styles.icon} source={{uri: windIcon}} /> 
                 <Text style={styles.itemText}>Wind Speed</Text>
-                <Text style={styles.itemText}>{wind_spd} mph</Text>
+                {unitSystem == 'I' ?
+                <Text style={styles.itemText}>{wind_spd} mph</Text> :
+                <Text style={styles.itemText}>{wind_spd} km/h</Text>
+                }
+                
             </View>       
         </View>
     );

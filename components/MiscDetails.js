@@ -4,7 +4,7 @@ import React from "react";
 import { colors, fonts, size } from "../utils";
 import { ICON_URL } from '@env';
 
-export default function MiscDetails({weather}) {
+export default function MiscDetails({weather, unitSystem}) {
     const { data: [{ pres, aqi, uv, vis }]} = weather;
     const pressureIcon = `${ICON_URL}pressure.png`;
     const airQualityIcon = `${ICON_URL}air-quality.png`;
@@ -46,7 +46,11 @@ export default function MiscDetails({weather}) {
                     <Image style={styles.icon} source={{uri: visibilityIcon}} />
                     <Text style={styles.itemText}>Visibility</Text>
                 </View>
-                <Text style={{...styles.itemText}}>{vis} mi</Text>
+                {unitSystem == 'I' ?
+                <Text style={{...styles.itemText}}>{vis} mi</Text> :
+                <Text style={{...styles.itemText}}>{vis} km</Text>
+                }
+                
             </View>
         </View>
     );

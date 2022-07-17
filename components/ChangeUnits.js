@@ -7,11 +7,11 @@ import { colors, size, fonts } from '../utils';
 export default function ChangeUnits({unitSystem, setUnitSystem}) {
     return (
         <View>
-            <Pressable  style={({ pressed }) => [
+            <Pressable style={({ pressed }) => [
                 {
                     backgroundColor: pressed
-                    ? colors.BLUE
-                    : colors.DARK_BLUE
+                    ? colors.DARK_BLUE
+                    : colors.BLUE
                 },
                 styles.buttonBox
             ]}
@@ -46,5 +46,6 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderRadius: 25,
         alignItems: 'center',
+        marginVertical: 10
     }
 })

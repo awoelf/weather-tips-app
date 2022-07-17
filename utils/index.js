@@ -3,11 +3,9 @@ export const colors = {
     BACKGROUND_COLOR_NIGHT: '#454F84',
     BOX_BACKGROUND: '#546DC550',
     FONT_COLOR: '#EAEBED',
-    GREEN: '#ABCAC3',
-    RED: '#D84845',
-    YELLOW: '#F39237',
-    BLUE: '#ABCAC350',
-    DARK_BLUE: '#ABCAC380'
+    YELLOW: '#F3AF37',
+    BLUE: '#ABCAC380',
+    DARK_BLUE: '#ABCAC350'
 };
 
 export const size = {
