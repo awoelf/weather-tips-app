@@ -1,5 +1,6 @@
 <h1>Weather Tips</h1>
 <p>An app that provides helpful information about the weather and suggestions for different weather conditions.<p>
+ <p>Demo the app at: https://appetize.io/app/cej3j22xxc5prkh6myp43oqwne?device=pixel4&osVersion=11.0&scale=75</p>
  
 <h2>Features</h2>
 <p>Quickly find information about current weather conditions, such as humimdity, wind speed, UV index, and more! Weather tips and alerts will apprear based on local weather conditions. The dropdown menu in the top right allows the user to change units and refresh the page.</p>
